@@ -1,0 +1,14 @@
+.div_image {
+  margin-top: 150px;
+  width: 100%;
+  height: 400px;
+  margin-bottom: 200px;
+  background-color: #121929;
+}
+
+.image_hero {
+  width: 80%;
+  height: 300px;
+  margin-left: 120px;
+  margin-top: 35px;
+}

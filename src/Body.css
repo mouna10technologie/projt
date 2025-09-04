@@ -1,0 +1,25 @@
+.div_ecriture {
+  width: 100%;
+  height: 150px;
+  border-radius: 20px;
+  box-shadow: 10px 20px 10px rgba(0, 0, 0, 0.4);
+  color: #ffffff;
+  background-color: #2a2f3a;
+  text-align: center;
+  margin-top: 200px;
+  text-align: center;
+}
+
+body {
+  background-color: black;
+}
+
+.h1_body {
+}
+
+.p_body {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: bolder;
+  font-size: larger;
+  color: #c27aff;
+}

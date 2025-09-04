@@ -3,7 +3,7 @@ function NavBar() {
   return (
     <>
       <nav>
-        <p>Dev-job</p>
+        <p className="logo_nav">Dev-job</p>
         <ul>
           <li>
             <a>Developpeurs</a>
@@ -12,7 +12,13 @@ function NavBar() {
             <a>Recruteurs</a>
           </li>
           <li>
-            <a></a>
+            <a>Actualites dev</a>
+          </li>
+          <li>
+            <a>IA</a>
+          </li>
+          <li>
+            <a>Contact</a>
           </li>
         </ul>
       </nav>

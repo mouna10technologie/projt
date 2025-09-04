@@ -1,3 +1,7 @@
+import Footer from "./Footer";
+import Body from "./Body";
+import Header from "./Header";
+import Image from "./Image";
 import Careaux from "./Careaux";
 import "./App.css";
 function App() {
@@ -8,7 +12,7 @@ function App() {
           "https://www.newmanstech.com/wp-content/uploads/2023/12/developpeur-web.jpeg",
         titre: "Developpeurs",
         description:
-          "Trouvez les meilleurs développeurs spécialisés en IA, machine learning et technologies émergentes pour vos projets innovants.",
+          "Trouvez les meilleurs développeurs plus les spécialisés en IA, machine learning et technologies émergentes pour vos projets innovants.",
       },
 
       {
@@ -20,7 +24,8 @@ function App() {
       },
 
       {
-        image: "",
+        image:
+          "https://olliewood.fr/wp-content/uploads/2025/08/Quels-sont-les-differents-types-de-contrats-de-travail-et-leurs-particularites-.jpg",
         titre: "Types de contrat",
         description:
           "Explorez toutes les modalités de collaboration : CDI, freelance, missions courtes, contrats internationaux adaptés à vos besoins.",
@@ -49,16 +54,20 @@ function App() {
           "https://static.vecteezy.com/system/resources/previews/034/464/429/non_2x/an-icon-design-of-job-test-vector.jpg",
         titre: "Test technique",
         description:
-          "Un test technique pour les développeurs est une évaluation pratique visant à mesurer les compétences techniques d’un candidat, souvent à travers des exercices de programmation, des résolutions de bugs ou des projets à coder.",
+          "Évaluation pratique des compétences d’un développeur via des exercices techniques.",
       },
     ],
   ];
 
   return (
     <>
+      <Header />
+      <Body />
+      <Image />
       {box.map((carrer) => (
-        <Careaux carrer="carrer" />
+        <Careaux carrer={carrer} />
       ))}
+      <Footer />
     </>
   );
 }

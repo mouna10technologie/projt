@@ -1,14 +1,20 @@
 .div_cartes {
   width: 200px;
-  height: 200px;
+  height: 290px;
   box-shadow: inset;
   border: none;
   transition: all 1s ease-in-out;
   text-align: center;
   padding: 1rem;
   margin: 1rem;
+  border-radius: 20px;
+  background-color: white;
 }
 
 .div_cartes:hover {
   border-style: outset;
+}
+
+img {
+  border-radius: 20px;
 }
