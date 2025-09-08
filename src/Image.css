@@ -1,14 +1,21 @@
 .div_image {
-  margin-top: 150px;
+  margin-top: 130px;
   width: 100%;
   height: 400px;
   margin-bottom: 200px;
-  background-color: #121929;
+ 
 }
 
 .image_hero {
   width: 80%;
-  height: 300px;
+  height: 400px;
   margin-left: 120px;
   margin-top: 35px;
+  box-shadow: 40px 50px 40px rgba(63, 11, 143, 0.5);
+  transition: all 1s ease-in-out;
+}
+
+.image_hero:hover {
+  transform: translate3d(3px,7px,5px);
+
 }

@@ -2,6 +2,7 @@ nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
+
 }
 
 ul {
@@ -9,10 +10,14 @@ ul {
   justify-content: center;
   align-items: center;
   list-style: none;
-  color: white;
+  
+}
+li{margin: 1rem;
+ 
 }
 
-a {
+Link{
+
   text-decoration: none;
   margin: 1rem;
   padding: auto;

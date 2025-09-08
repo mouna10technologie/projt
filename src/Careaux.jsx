@@ -4,8 +4,9 @@ function Careaux({ carrer }) {
   return (
     <>
       <div className="div_globale">
-        {carrer.map((value) => (
+        {carrer.map((value,index2) => (
           <Cartes
+          key={index2}
             image={value.image}
             titre={value.titre}
             description={value.description}

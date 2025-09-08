@@ -1,27 +1,33 @@
+import { Link } from "react-router-dom";
 import "./NavBar.css";
 function NavBar() {
   return (
     <>
       <nav>
+
         <p className="logo_nav">Dev-job</p>
         <ul>
           <li>
-            <a>Developpeurs</a>
+           <Link to="/">Home</Link> 
+          </li>
+         <li>
+           <Link to="/Developpeurs"> Developpeurs</Link> 
           </li>
           <li>
-            <a>Recruteurs</a>
+            <Link to="/Recruteurs"> Recruteurs</Link>
           </li>
           <li>
-            <a>Actualites dev</a>
+           <Link to="/Actualites_dev"> Actualites_dev</Link>
           </li>
           <li>
-            <a>IA</a>
+           <Link to="/IA"> IA</Link>
           </li>
           <li>
-            <a>Contact</a>
+           <Link to="/Contact"> Contact</Link>
           </li>
         </ul>
       </nav>
+      
     </>
   );
 }
