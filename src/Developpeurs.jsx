@@ -177,13 +177,14 @@ function Developpeurs() {
           alt="image sur les developpeurs"
         />
         <h1 className="h1_developpeurs">Les developpeurs</h1>
-        <h3 className="h3_developpeurs ">
-          Les développeurs sont les artisans du monde numérique, créant et
-          maintenant les applications et sites web qui facilitent notre
-          quotidien. Maîtres de plusieurs langages de programmation, ils
-          innovent et optimisent les solutions digitales. Leur expertise est
-          essentielle pour toute entreprise souhaitant réussir sa transformation
-          numérique.
+        <h3 className="h3_developpeurs">
+          <span className="texte-lumineux-dev">
+            {"Les développeurs sont les artisans du monde numérique, créant et maintenant les applications et sites web qui facilitent notre quotidien. Maîtres de plusieurs langages de programmation, ils innovent et optimisent les solutions digitales. Leur expertise est essentielle pour toute entreprise souhaitant réussir sa transformation numérique.".split('').map((char, index) => (
+              <span key={index} className="lettre-brillante-dev" style={{animationDelay: `${index * 0.02}s`}}>
+                {char === ' ' ? '\u00A0' : char}
+              </span>
+            ))}
+          </span>
         </h3>
       </div>
 

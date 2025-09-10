@@ -4,7 +4,7 @@ function Image() {
     <>
       <div className="div_image">
         <img
-          src="./public/developpeurs.png"
+          src="./public/Developpeurs_plus_ia.png"
           alt="image sur developpeur"
           className=" image_hero"
         />

@@ -2,7 +2,15 @@ import React, { useEffect, useState } from "react";
 import "./IA.css";
 
 // Composant pour les cartes de types d'IA
-function CarteTypeIA({ nom, description, icone, domaine, applications, niveau, couleur }) {
+function CarteTypeIA({
+  nom,
+  description,
+  icone,
+  domaine,
+  applications,
+  niveau,
+  couleur,
+}) {
   return (
     <div className={`carte-type-ia ${couleur}`}>
       <div className="carte-ia-header">
@@ -24,7 +32,9 @@ function CarteTypeIA({ nom, description, icone, domaine, applications, niveau, c
           <h4>⚡ Applications</h4>
           <div className="applications-tags">
             {applications.map((app, index) => (
-              <span key={index} className="application-tag">{app}</span>
+              <span key={index} className="application-tag">
+                {app}
+              </span>
             ))}
           </div>
         </div>
@@ -47,17 +57,41 @@ function Carrousel3D() {
   const [rotation, setRotation] = useState(0);
 
   const imagesIA = [
-    { src: "./public/ia.jpeg", alt: "Intelligence Artificielle Générale", titre: "IA Générale" },
-    { src: "./public/Developeurs.png", alt: "Machine Learning", titre: "Machine Learning" },
-    { src: "./public/Developpeurs_plus_ia.png", alt: "Deep Learning", titre: "Deep Learning" },
-    { src: "./public/DevloppeurX.jpeg", alt: "IA Conversationnelle", titre: "Chatbots IA" },
-    { src: "./public/ia.jpeg", alt: "Vision par Ordinateur", titre: "Computer Vision" },
-    { src: "./public/Developeurs.png", alt: "Traitement du Langage", titre: "NLP" }
+    {
+      src: "./public/ia.jpeg",
+      alt: "Intelligence Artificielle Générale",
+      titre: "IA Générale",
+    },
+    {
+      src: "./public/developpeur_ia.png",
+      alt: "Machine Learning",
+      titre: "Machine Learning",
+    },
+    {
+      src: "./public/ai3.jpg",
+      alt: "Deep Learning",
+      titre: "Deep Learning",
+    },
+    {
+      src: "./public/ai.jpg",
+      alt: "IA Conversationnelle",
+      titre: "Chatbots IA",
+    },
+    {
+      src: "./public/ai3.jpg",
+      alt: "Vision par Ordinateur",
+      titre: "Computer Vision",
+    },
+    {
+      src: "./public/ai4.jpg",
+      alt: "Traitement du Langage",
+      titre: "NLP",
+    },
   ];
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setRotation(prev => prev + 60);
+      setRotation((prev) => prev + 60);
     }, 3000);
 
     return () => clearInterval(interval);
@@ -65,10 +99,13 @@ function Carrousel3D() {
 
   return (
     <div className="carrousel-3d-container">
-      <div className="carrousel-3d" style={{ transform: `rotateY(${rotation}deg)` }}>
+      <div
+        className="carrousel-3d"
+        style={{ transform: `rotateY(${rotation}deg)` }}
+      >
         {imagesIA.map((image, index) => (
-          <div 
-            key={index} 
+          <div
+            key={index}
             className="carrousel-item"
             style={{ transform: `rotateY(${index * 60}deg) translateZ(300px)` }}
           >
@@ -94,13 +131,13 @@ function Carrousel3D() {
 function TitreAnimeIA({ texte }) {
   return (
     <h1 className="titre-ia-anime">
-      {texte.split('').map((lettre, index) => (
-        <span 
-          key={index} 
+      {texte.split("").map((lettre, index) => (
+        <span
+          key={index}
           className="lettre-animee-ia"
           style={{ animationDelay: `${index * 0.1}s` }}
         >
-          {lettre === ' ' ? '\u00A0' : lettre}
+          {lettre === " " ? "\u00A0" : lettre}
         </span>
       ))}
     </h1>
@@ -111,58 +148,72 @@ function IA() {
   const typesIA = [
     {
       nom: "Machine Learning",
-      description: "Algorithmes qui apprennent automatiquement à partir de données pour faire des prédictions ou prendre des décisions.",
+      description:
+        "Algorithmes qui apprennent automatiquement à partir de données pour faire des prédictions ou prendre des décisions.",
       icone: "🤖",
       domaine: "Apprentissage Automatique",
       applications: ["Recommandations", "Prédictions", "Classification"],
       niveau: "Avancé",
-      couleur: "bleu"
+      couleur: "bleu",
     },
     {
       nom: "Deep Learning",
-      description: "Réseaux de neurones profonds inspirés du cerveau humain pour résoudre des problèmes complexes.",
+      description:
+        "Réseaux de neurones profonds inspirés du cerveau humain pour résoudre des problèmes complexes.",
       icone: "🧠",
       domaine: "Réseaux de Neurones",
       applications: ["Vision", "Reconnaissance vocale", "Traduction"],
       niveau: "Expert",
-      couleur: "violet"
+      couleur: "violet",
     },
     {
       nom: "IA Conversationnelle",
-      description: "Systèmes capables de comprendre et de générer du langage naturel pour interagir avec les humains.",
+      description:
+        "Systèmes capables de comprendre et de générer du langage naturel pour interagir avec les humains.",
       icone: "💬",
       domaine: "Traitement du Langage",
       applications: ["Chatbots", "Assistants virtuels", "Support client"],
       niveau: "Intermédiaire",
-      couleur: "dore"
+      couleur: "dore",
     },
     {
       nom: "Computer Vision",
-      description: "Technologie permettant aux machines de voir, identifier et analyser le contenu visuel.",
+      description:
+        "Technologie permettant aux machines de voir, identifier et analyser le contenu visuel.",
       icone: "👁️",
       domaine: "Vision Artificielle",
-      applications: ["Reconnaissance faciale", "Analyse d'images", "Véhicules autonomes"],
+      applications: [
+        "Reconnaissance faciale",
+        "Analyse d'images",
+        "Véhicules autonomes",
+      ],
       niveau: "Avancé",
-      couleur: "vert"
+      couleur: "vert",
     },
     {
       nom: "IA Générative",
-      description: "Modèles capables de créer du nouveau contenu original basé sur les données d'entraînement.",
+      description:
+        "Modèles capables de créer du nouveau contenu original basé sur les données d'entraînement.",
       icone: "🎨",
       domaine: "Génération de Contenu",
       applications: ["Art IA", "Génération de texte", "Création musicale"],
       niveau: "Expert",
-      couleur: "rose"
+      couleur: "rose",
     },
     {
       nom: "Robotique IA",
-      description: "Intelligence artificielle intégrée dans des systèmes robotiques pour l'automatisation avancée.",
+      description:
+        "Intelligence artificielle intégrée dans des systèmes robotiques pour l'automatisation avancée.",
       icone: "🦾",
       domaine: "Robotique Intelligente",
-      applications: ["Robots industriels", "Drones autonomes", "Assistance médicale"],
+      applications: [
+        "Robots industriels",
+        "Drones autonomes",
+        "Assistance médicale",
+      ],
       niveau: "Expert",
-      couleur: "orange"
-    }
+      couleur: "orange",
+    },
   ];
 
   return (
@@ -171,7 +222,8 @@ function IA() {
       <div className="ia-header">
         <TitreAnimeIA texte="Intelligence Artificielle" />
         <p className="sous-titre-ia">
-          Découvrez l'univers fascinant de l'IA et ses applications révolutionnaires dans le monde du développement
+          Découvrez l'univers fascinant de l'IA et ses applications
+          révolutionnaires dans le monde du développement
         </p>
       </div>
 
@@ -228,10 +280,11 @@ function IA() {
           <div className="info-text">
             <h3>L'IA dans le Recrutement</h3>
             <p>
-              L'intelligence artificielle révolutionne le recrutement en analysant rapidement les CV, 
-              en identifiant les meilleurs profils et en automatisant certaines étapes. Elle rend le 
-              processus plus rapide et efficace tout en soulevant des enjeux éthiques importants sur 
-              la transparence et la protection des données.
+              L'intelligence artificielle révolutionne le recrutement en
+              analysant rapidement les CV, en identifiant les meilleurs profils
+              et en automatisant certaines étapes. Elle rend le processus plus
+              rapide et efficace tout en soulevant des enjeux éthiques
+              importants sur la transparence et la protection des données.
             </p>
           </div>
           <div className="info-stats">

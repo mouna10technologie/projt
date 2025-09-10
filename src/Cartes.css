@@ -1,26 +1,7 @@
-.div_cartes {
-  width: 200px;
-  height: 330px;
-  box-shadow: 10px 20px 10px rgba(0,0,0,0.5);
-  border: none;
-  transition: all 1s ease-in-out;
-  text-align: center;
-  padding: 1rem;
-  margin: 1rem;
-  border-radius: 20px;
-  background-color: white;
-border-style: inset;
-}
+@import './OptimizedCards.css';
 
-.div_cartes:hover {
-  border-style: outset;
-  box-shadow: 40px 50px 40px rgba(241, 239, 117, 0.5);
-  transform: scale(1.1);
-  background-color: black;
-  color: white;
-}
-
-img {
-  border-radius: 20px;
+/* Styles spécifiques aux cartes principales si nécessaire */
+.div_cartes img {
+  border-radius: 12px;
 }
 

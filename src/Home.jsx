@@ -1,15 +1,37 @@
 import Image from "./Image";
 import Body from "./Body";
 import Careaux from "./Careaux";
-function Home(){
-     let box = [
+import "./Home.css";
+
+function AnimatedText({ text }) {
+  return (
+    <div className="animated-text-container">
+      <h1 className="animated-description">
+        {text.split("").map((char, index) => (
+          <span
+            key={index}
+            className="glowing-letter"
+            style={{ animationDelay: `${index * 0.05}s` }}
+          >
+            {char === " " ? "\u00A0" : char}
+          </span>
+        ))}
+      </h1>
+    </div>
+  );
+}
+
+function Home() {
+  const descriptionText = "Une plateforme dédiée aux recruteurs pour identifier, évaluer et accompagner les meilleurs talents tech, spécialisés en IA, machine learning et technologies de pointe.";
+  
+  let box = [
     [
       {
         image:
           "https://www.newmanstech.com/wp-content/uploads/2023/12/developpeur-web.jpeg",
-        titre: "Developpeurs",
+        titre: "Développeurs",
         description:
-          "Trouvez les meilleurs développeurs plus les spécialisés en IA, machine learning et technologies émergentes pour vos projets.",
+          "Trouvez les meilleurs développeurs spécialisés en IA, machine learning et technologies émergentes pour vos projets.",
       },
 
       {
@@ -33,7 +55,7 @@ function Home(){
       {
         image:
           "https://tse1.mm.bing.net/th/id/OIP.RYyqwfKufF34oycQyQ1n_AAAAA?rs=1&pid=ImgDetMain&o=7&rm=3",
-        titre: "Comment developer votre competences",
+        titre: "Développer vos compétences",
         description:
           "Accédez à des formations personnalisées, des certifications reconnues et des ressources d'apprentissage pour rester à la pointe de la technologie.",
       },
@@ -41,7 +63,7 @@ function Home(){
       {
         image:
           "https://static.vecteezy.com/ti/photos-gratuite/p2/23431352-aujourd-hui-est-le-journee-symbole-concept-mots-revenir-sur-les-atouts-sur-en-bois-blocs-gratuit-photo.jpg",
-        titre: " Rester  à jour ",
+        titre: "Rester à jour",
         description:
           "Suivez les dernières tendances technologiques, les actualités du secteur et les évolutions du marché de l'emploi tech.",
       },
@@ -49,27 +71,26 @@ function Home(){
       {
         image:
           "https://static.vecteezy.com/system/resources/previews/034/464/429/non_2x/an-icon-design-of-job-test-vector.jpg",
-        titre: "Test technique",
+        titre: "Tests techniques",
         description:
-          "Évaluation pratique des compétences d’un développeur via des exercices techniques.",
+          "Évaluation pratique des compétences d'un développeur via des exercices techniques adaptés aux besoins actuels.",
       },
     ],
   ];
 
-return(
-
-<>
-  <Body />
-  <Image />
- {box.map((carrer,index1) => (
-        <Careaux  key={index1} carrer={carrer} />
-      ))}
-
-
-
-
-
-</>
-)
+  return (
+    <div className="home-container">
+      <Body />
+      <Image />
+      
+      <AnimatedText text={descriptionText} />
+      
+      <div className="cards-section">
+        {box.map((carrer, index1) => (
+          <Careaux key={index1} carrer={carrer} />
+        ))}
+      </div>
+    </div>
+  );
 }
-export default Home
+export default Home;
