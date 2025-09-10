@@ -1,9 +1,58 @@
 import "./Developpeurs.css";
+
 function CarteDeveloppeurs({ titre, description }) {
   return (
     <div className="div_developpeurs">
       <h2>{titre}</h2>
       <h4>{description}</h4>
+    </div>
+  )
+}
+
+function CarteCandidat({ nom, prenom, age, diplome, experience, salaire, photo, competences, localisation }) {
+  return (
+    <div className="carte-candidat">
+      <div className="carte-header">
+        <div className="photo-candidat">
+          <img src={photo} alt={`${prenom} ${nom}`} />
+        </div>
+        <div className="info-principale">
+          <h3 className="nom-candidat">{prenom} {nom}</h3>
+          <p className="age-candidat">{age} ans</p>
+          <p className="localisation-candidat">📍 {localisation}</p>
+        </div>
+      </div>
+      
+      <div className="carte-body">
+        <div className="diplome-section">
+          <h4>🎓 Formation</h4>
+          <p>{diplome}</p>
+        </div>
+        
+        <div className="experience-section">
+          <h4>💼 Expérience</h4>
+          <p>{experience}</p>
+        </div>
+        
+        <div className="competences-section">
+          <h4>🚀 Compétences</h4>
+          <div className="competences-tags">
+            {competences.map((comp, index) => (
+              <span key={index} className="competence-tag">{comp}</span>
+            ))}
+          </div>
+        </div>
+        
+        <div className="salaire-section">
+          <h4>💰 Salaire souhaité</h4>
+          <p className="salaire-montant">{salaire}</p>
+        </div>
+      </div>
+      
+      <div className="carte-footer">
+        <button className="btn-contact">Contacter</button>
+        <button className="btn-profil">Voir profil</button>
+      </div>
     </div>
   )
 }
@@ -50,6 +99,76 @@ function Developpeurs() {
 
   ]
 
+  // Données des candidats développeurs
+  const candidats = [
+    {
+      nom: "Martin",
+      prenom: "Sophie",
+      age: 28,
+      diplome: "Master en Informatique - EPITA",
+      experience: "5 ans - Full Stack Developer",
+      salaire: "55 000€ - 65 000€",
+      photo: "./public/Developeurs.png",
+      competences: ["React", "Node.js", "Python", "MongoDB", "AWS"],
+      localisation: "Paris, France"
+    },
+    {
+      nom: "Dubois",
+      prenom: "Alexandre",
+      age: 32,
+      diplome: "Ingénieur Logiciel - INSA Lyon",
+      experience: "8 ans - Lead Developer",
+      salaire: "70 000€ - 80 000€",
+      photo: "./public/DevloppeurX.jpeg",
+      competences: ["Java", "Spring", "Angular", "PostgreSQL", "Docker"],
+      localisation: "Lyon, France"
+    },
+    {
+      nom: "Leroy",
+      prenom: "Emma",
+      age: 25,
+      diplome: "Licence Pro Développement Web",
+      experience: "3 ans - Frontend Developer",
+      salaire: "40 000€ - 50 000€",
+      photo: "./public/Developeurs.png",
+      competences: ["Vue.js", "TypeScript", "CSS3", "Figma", "Git"],
+      localisation: "Nantes, France"
+    },
+    {
+      nom: "Garcia",
+      prenom: "Thomas",
+      age: 29,
+      diplome: "Master DevOps - Université Paris-Saclay",
+      experience: "6 ans - DevOps Engineer",
+      salaire: "60 000€ - 70 000€",
+      photo: "./public/DevloppeurX.jpeg",
+      competences: ["Kubernetes", "Terraform", "Jenkins", "Azure", "Python"],
+      localisation: "Toulouse, France"
+    },
+    {
+      nom: "Moreau",
+      prenom: "Camille",
+      age: 26,
+      diplome: "École 42 - Formation Développeur",
+      experience: "4 ans - Mobile Developer",
+      salaire: "48 000€ - 58 000€",
+      photo: "./public/Developeurs.png",
+      competences: ["React Native", "Flutter", "Swift", "Kotlin", "Firebase"],
+      localisation: "Bordeaux, France"
+    },
+    {
+      nom: "Bernard",
+      prenom: "Lucas",
+      age: 31,
+      diplome: "Master IA - Sorbonne Université",
+      experience: "7 ans - Data Scientist",
+      salaire: "65 000€ - 75 000€",
+      photo: "./public/DevloppeurX.jpeg",
+      competences: ["Python", "TensorFlow", "R", "SQL", "Spark"],
+      localisation: "Lille, France"
+    }
+  ];
+
   return (
     <>
       <div className="les_developpeurs">
@@ -67,22 +186,51 @@ function Developpeurs() {
           numérique.
         </h3>
       </div>
-        <div className="div_devlopper"><p className="p_developpeurs">Les outils essentiels qu’un développeur doit maîtriser ou connaître</p></div>
 
-      <div className="Developpeurs">
+      {/* Section des candidats développeurs */}
+      <div className="section-candidats">
+        <div className="candidats-header">
+          <h2 className="titre-candidats">🚀 Nos Développeurs Talents</h2>
+          <p className="sous-titre-candidats">Découvrez les profils de nos développeurs expérimentés</p>
+        </div>
+        
+        <div className="grille-candidats">
+          {candidats.map((candidat, index) => (
+            <CarteCandidat
+              key={index}
+              nom={candidat.nom}
+              prenom={candidat.prenom}
+              age={candidat.age}
+              diplome={candidat.diplome}
+              experience={candidat.experience}
+              salaire={candidat.salaire}
+              photo={candidat.photo}
+              competences={candidat.competences}
+              localisation={candidat.localisation}
+            />
+          ))}
+        </div>
+      </div>
+
+      <div className="div_devlopper">
+        <h2 className="titre-outils-essentiels">
+          {"Les outils essentiels qu'un développeur doit maîtriser ou connaître".split('').map((char, index) => (
+            <span key={index} className="lettre-animee" style={{animationDelay: `${index * 0.05}s`}}>
+              {char === ' ' ? '\u00A0' : char}
+            </span>
+          ))}
+        </h2>
+      </div>
+
+      <div className="container-cartes-dev">
         {box1.map((valeur, index) => (
           <CarteDeveloppeurs
             key={index}
             titre={valeur.titre}
             description={valeur.description}
-
           />
         ))}
       </div>
-
-
-
-
     </>
   );
 }
