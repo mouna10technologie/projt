@@ -99,6 +99,7 @@
   background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
   transition: width 0.3s ease;
   z-index: -1;
+ border-radius: 12px;
 }
 
 .navbar-link:hover::before {
