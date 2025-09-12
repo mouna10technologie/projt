@@ -1,3 +1,4 @@
+@import "./OptimizedCards.css";
 .les_recruteurs {
   width: 100%;
   min-height: 100vh;
@@ -12,30 +13,43 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  box-sizing: border-box;
 }
 
 .les_recruteurs::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: 
-    radial-gradient(circle at 20% 30%, rgba(102, 126, 234, 0.08) 0%, transparent 50%),
-    radial-gradient(circle at 80% 70%, rgba(118, 75, 162, 0.08) 0%, transparent 50%);
+  background: radial-gradient(
+      circle at 20% 30%,
+      rgba(102, 126, 234, 0.08) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 80% 70%,
+      rgba(118, 75, 162, 0.08) 0%,
+      transparent 50%
+    );
   pointer-events: none;
   animation: backgroundPulseRec 8s ease-in-out infinite;
 }
 
 @keyframes backgroundPulseRec {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.7; }
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
 }
 .h1_recruteurs {
   font-size: clamp(2.8rem, 6vw, 4.5rem);
   font-weight: 900;
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
   margin: 3rem 0;
   color: #ffffff;
   animation: titlePulse 3s ease-in-out infinite;
@@ -43,10 +57,8 @@
   z-index: 1;
   text-align: center;
   letter-spacing: 2px;
-  text-shadow: 
-    0 0 20px rgba(102, 126, 234, 0.8),
-    0 0 40px rgba(118, 75, 162, 0.6),
-    0 0 60px rgba(255, 215, 0, 0.4),
+  text-shadow: 0 0 20px rgba(102, 126, 234, 0.8),
+    0 0 40px rgba(118, 75, 162, 0.6), 0 0 60px rgba(255, 215, 0, 0.4),
     0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
@@ -63,7 +75,8 @@
 }
 
 @keyframes titlePulse {
-  0%, 100% {
+  0%,
+  100% {
     filter: brightness(1) drop-shadow(0 0 10px rgba(102, 126, 234, 0.5));
     transform: scale(1);
   }
@@ -77,13 +90,10 @@
   display: inline-block;
   color: #ffffff;
   font-weight: 900;
-  text-shadow: 
-    0 0 15px rgba(102, 126, 234, 0.9),
-    0 0 25px rgba(102, 126, 234, 0.7),
-    0 0 35px rgba(118, 75, 162, 0.5),
+  text-shadow: 0 0 15px rgba(102, 126, 234, 0.9),
+    0 0 25px rgba(102, 126, 234, 0.7), 0 0 35px rgba(118, 75, 162, 0.5),
     0 0 45px rgba(255, 215, 0, 0.3);
-  animation: 
-    letterGlowTitreRec 4s ease-in-out infinite,
+  animation: letterGlowTitreRec 4s ease-in-out infinite,
     letterFloat 2.5s ease-in-out infinite;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   filter: brightness(1.1);
@@ -93,38 +103,30 @@
   transform: scale(1.15) translateY(-3px);
   color: #ffd700;
   filter: brightness(1.4) drop-shadow(0 0 15px rgba(255, 215, 0, 0.8));
-  text-shadow: 
-    0 0 20px rgba(255, 215, 0, 1),
-    0 0 30px rgba(255, 215, 0, 0.8),
-    0 0 40px rgba(255, 215, 0, 0.6),
-    0 0 50px rgba(255, 215, 0, 0.4);
+  text-shadow: 0 0 20px rgba(255, 215, 0, 1), 0 0 30px rgba(255, 215, 0, 0.8),
+    0 0 40px rgba(255, 215, 0, 0.6), 0 0 50px rgba(255, 215, 0, 0.4);
 }
 
 @keyframes letterGlowTitreRec {
-  0%, 100% {
-    text-shadow: 
-      0 0 10px rgba(102, 126, 234, 0.8),
-      0 0 20px rgba(102, 126, 234, 0.6),
-      0 0 30px rgba(118, 75, 162, 0.4);
+  0%,
+  100% {
+    text-shadow: 0 0 10px rgba(102, 126, 234, 0.8),
+      0 0 20px rgba(102, 126, 234, 0.6), 0 0 30px rgba(118, 75, 162, 0.4);
   }
   33% {
-    text-shadow: 
-      0 0 15px rgba(118, 75, 162, 0.9),
-      0 0 25px rgba(118, 75, 162, 0.7),
-      0 0 35px rgba(118, 75, 162, 0.5);
+    text-shadow: 0 0 15px rgba(118, 75, 162, 0.9),
+      0 0 25px rgba(118, 75, 162, 0.7), 0 0 35px rgba(118, 75, 162, 0.5);
   }
   66% {
-    text-shadow: 
-      0 0 20px rgba(255, 215, 0, 0.9),
-      0 0 30px rgba(255, 215, 0, 0.7),
-      0 0 40px rgba(255, 215, 0, 0.5);
+    text-shadow: 0 0 20px rgba(255, 215, 0, 0.9),
+      0 0 30px rgba(255, 215, 0, 0.7), 0 0 40px rgba(255, 215, 0, 0.5);
   }
 }
 
 .h3_recruteurs {
   font-size: clamp(1.2rem, 3vw, 1.8rem);
   font-weight: 600;
-  font-family: 'Georgia', serif;
+  font-family: "Georgia", serif;
   margin: 2rem auto;
   max-width: 900px;
   line-height: 1.6;
@@ -140,12 +142,9 @@
 .lettre-brillante-rec {
   display: inline-block;
   color: #ffffff;
-  text-shadow: 
-    0 0 8px rgba(102, 126, 234, 0.7),
-    0 0 16px rgba(102, 126, 234, 0.5),
-    0 0 24px rgba(102, 126, 234, 0.3);
-  animation: 
-    letterGlowRec 3.5s ease-in-out infinite,
+  text-shadow: 0 0 8px rgba(102, 126, 234, 0.7),
+    0 0 16px rgba(102, 126, 234, 0.5), 0 0 24px rgba(102, 126, 234, 0.3);
+  animation: letterGlowRec 3.5s ease-in-out infinite,
     letterFloat 2.8s ease-in-out infinite;
   transition: all 0.3s ease;
 }
@@ -153,41 +152,33 @@
 .lettre-brillante-rec:hover {
   transform: scale(1.1) translateY(-2px);
   color: #ffd700;
-  text-shadow: 
-    0 0 12px rgba(255, 215, 0, 0.9),
-    0 0 20px rgba(255, 215, 0, 0.7),
+  text-shadow: 0 0 12px rgba(255, 215, 0, 0.9), 0 0 20px rgba(255, 215, 0, 0.7),
     0 0 28px rgba(255, 215, 0, 0.5);
 }
 
 @keyframes letterGlowRec {
-  0%, 100% {
-    text-shadow: 
-      0 0 8px rgba(102, 126, 234, 0.7),
-      0 0 16px rgba(102, 126, 234, 0.5),
-      0 0 24px rgba(102, 126, 234, 0.3);
+  0%,
+  100% {
+    text-shadow: 0 0 8px rgba(102, 126, 234, 0.7),
+      0 0 16px rgba(102, 126, 234, 0.5), 0 0 24px rgba(102, 126, 234, 0.3);
   }
   25% {
-    text-shadow: 
-      0 0 10px rgba(118, 75, 162, 0.8),
-      0 0 18px rgba(118, 75, 162, 0.6),
-      0 0 26px rgba(118, 75, 162, 0.4);
+    text-shadow: 0 0 10px rgba(118, 75, 162, 0.8),
+      0 0 18px rgba(118, 75, 162, 0.6), 0 0 26px rgba(118, 75, 162, 0.4);
   }
   50% {
-    text-shadow: 
-      0 0 12px rgba(255, 215, 0, 0.8),
-      0 0 20px rgba(255, 215, 0, 0.6),
-      0 0 28px rgba(255, 215, 0, 0.4);
+    text-shadow: 0 0 12px rgba(255, 215, 0, 0.8),
+      0 0 20px rgba(255, 215, 0, 0.6), 0 0 28px rgba(255, 215, 0, 0.4);
   }
   75% {
-    text-shadow: 
-      0 0 10px rgba(230, 2, 120, 0.8),
-      0 0 18px rgba(230, 2, 120, 0.6),
-      0 0 26px rgba(230, 2, 120, 0.4);
+    text-shadow: 0 0 10px rgba(230, 2, 120, 0.8),
+      0 0 18px rgba(230, 2, 120, 0.6), 0 0 26px rgba(230, 2, 120, 0.4);
   }
 }
 
 @keyframes letterFloat {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0px);
   }
   50% {
@@ -208,24 +199,18 @@
   background: linear-gradient(45deg, #667eea, #764ba2, #ffd700, #667eea);
   background-size: 300% 300%;
   padding: 4px;
-  animation: 
-    imageRotateGlow 6s linear infinite,
-    imagePulse 3s ease-in-out infinite,
-    imageFloat 4s ease-in-out infinite;
-  box-shadow: 
-    0 0 30px rgba(102, 126, 234, 0.4),
-    0 0 60px rgba(118, 75, 162, 0.3),
-    0 0 90px rgba(255, 215, 0, 0.2),
+  animation: imageRotateGlow 6s linear infinite,
+    imagePulse 3s ease-in-out infinite, imageFloat 4s ease-in-out infinite;
+  box-shadow: 0 0 30px rgba(102, 126, 234, 0.4),
+    0 0 60px rgba(118, 75, 162, 0.3), 0 0 90px rgba(255, 215, 0, 0.2),
     0 20px 40px rgba(0, 0, 0, 0.3);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .les_recruteurs img:hover {
   transform: scale(1.08) translateY(-10px);
-  box-shadow: 
-    0 0 40px rgba(102, 126, 234, 0.6),
-    0 0 80px rgba(118, 75, 162, 0.5),
-    0 0 120px rgba(255, 215, 0, 0.4),
+  box-shadow: 0 0 40px rgba(102, 126, 234, 0.6),
+    0 0 80px rgba(118, 75, 162, 0.5), 0 0 120px rgba(255, 215, 0, 0.4),
     0 30px 60px rgba(0, 0, 0, 0.4);
   filter: brightness(1.1) contrast(1.05);
 }
@@ -254,24 +239,22 @@
 }
 
 @keyframes imagePulse {
-  0%, 100% {
-    box-shadow: 
-      0 0 30px rgba(102, 126, 234, 0.4),
-      0 0 60px rgba(118, 75, 162, 0.3),
-      0 0 90px rgba(255, 215, 0, 0.2),
+  0%,
+  100% {
+    box-shadow: 0 0 30px rgba(102, 126, 234, 0.4),
+      0 0 60px rgba(118, 75, 162, 0.3), 0 0 90px rgba(255, 215, 0, 0.2),
       0 20px 40px rgba(0, 0, 0, 0.3);
   }
   50% {
-    box-shadow: 
-      0 0 40px rgba(102, 126, 234, 0.6),
-      0 0 80px rgba(118, 75, 162, 0.5),
-      0 0 120px rgba(255, 215, 0, 0.4),
+    box-shadow: 0 0 40px rgba(102, 126, 234, 0.6),
+      0 0 80px rgba(118, 75, 162, 0.5), 0 0 120px rgba(255, 215, 0, 0.4),
       0 25px 50px rgba(0, 0, 0, 0.4);
   }
 }
 
 @keyframes imageFloat {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0px) rotate(0deg);
   }
   33% {
@@ -281,7 +264,6 @@
     transform: translateY(4px) rotate(-1deg);
   }
 }
-
 
 /* Section des sites de recrutement */
 .section-sites-recrutement {
@@ -293,14 +275,22 @@
 }
 
 .section-sites-recrutement::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(circle at 30% 40%, rgba(102, 126, 234, 0.1) 0%, transparent 50%),
-              radial-gradient(circle at 70% 60%, rgba(118, 75, 162, 0.1) 0%, transparent 50%);
+  background: radial-gradient(
+      circle at 30% 40%,
+      rgba(102, 126, 234, 0.1) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 70% 60%,
+      rgba(118, 75, 162, 0.1) 0%,
+      transparent 50%
+    );
   pointer-events: none;
   animation: backgroundPulse 5s ease-in-out infinite;
 }
@@ -322,12 +312,9 @@
 .lettre-animee-recruteur {
   display: inline-block;
   color: #ffffff;
-  text-shadow: 
-    0 0 10px rgba(102, 126, 234, 0.8),
-    0 0 20px rgba(102, 126, 234, 0.6),
-    0 0 30px rgba(102, 126, 234, 0.4);
-  animation: 
-    letterGlowRecruteur 4s ease-in-out infinite,
+  text-shadow: 0 0 10px rgba(102, 126, 234, 0.8),
+    0 0 20px rgba(102, 126, 234, 0.6), 0 0 30px rgba(102, 126, 234, 0.4);
+  animation: letterGlowRecruteur 4s ease-in-out infinite,
     letterFloat 2.5s ease-in-out infinite;
   transition: all 0.3s ease;
 }
@@ -335,30 +322,23 @@
 .lettre-animee-recruteur:hover {
   transform: scale(1.15) translateY(-3px);
   color: #ffd700;
-  text-shadow: 
-    0 0 15px rgba(255, 215, 0, 1),
-    0 0 25px rgba(255, 215, 0, 0.8),
+  text-shadow: 0 0 15px rgba(255, 215, 0, 1), 0 0 25px rgba(255, 215, 0, 0.8),
     0 0 35px rgba(255, 215, 0, 0.6);
 }
 
 @keyframes letterGlowRecruteur {
-  0%, 100% {
-    text-shadow: 
-      0 0 10px rgba(102, 126, 234, 0.8),
-      0 0 20px rgba(102, 126, 234, 0.6),
-      0 0 30px rgba(102, 126, 234, 0.4);
+  0%,
+  100% {
+    text-shadow: 0 0 10px rgba(102, 126, 234, 0.8),
+      0 0 20px rgba(102, 126, 234, 0.6), 0 0 30px rgba(102, 126, 234, 0.4);
   }
   33% {
-    text-shadow: 
-      0 0 15px rgba(118, 75, 162, 0.9),
-      0 0 25px rgba(118, 75, 162, 0.7),
-      0 0 35px rgba(118, 75, 162, 0.5);
+    text-shadow: 0 0 15px rgba(118, 75, 162, 0.9),
+      0 0 25px rgba(118, 75, 162, 0.7), 0 0 35px rgba(118, 75, 162, 0.5);
   }
   66% {
-    text-shadow: 
-      0 0 20px rgba(255, 215, 0, 0.9),
-      0 0 30px rgba(255, 215, 0, 0.7),
-      0 0 40px rgba(255, 215, 0, 0.5);
+    text-shadow: 0 0 20px rgba(255, 215, 0, 0.9),
+      0 0 30px rgba(255, 215, 0, 0.7), 0 0 40px rgba(255, 215, 0, 0.5);
   }
 }
 
@@ -378,34 +358,42 @@
   margin: 0 auto;
   position: relative;
   z-index: 1;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 /* Cartes de sites de recrutement */
 .carte-site-recrutement {
   width: 280px;
+  max-width: 100%;
   min-height: 320px;
   background: linear-gradient(145deg, #1e1e1e 0%, #2a2a2a 100%);
   border-radius: 20px;
   padding: 1.5rem;
-  box-shadow: 
-    0 10px 30px rgba(0, 0, 0, 0.5),
-    0 1px 8px rgba(0, 0, 0, 0.3),
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 1px 8px rgba(0, 0, 0, 0.3),
     inset 0 1px 0 rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(102, 126, 234, 0.2);
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   position: relative;
   overflow: hidden;
   cursor: pointer;
+  box-sizing: border-box;
 }
 
 .carte-site-recrutement::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(102, 126, 234, 0.15), transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(102, 126, 234, 0.15),
+    transparent
+  );
   transition: left 0.6s ease;
 }
 
@@ -415,10 +403,8 @@
 
 .carte-site-recrutement:hover {
   transform: translateY(-10px) scale(1.02);
-  box-shadow: 
-    0 25px 50px rgba(102, 126, 234, 0.25),
-    0 15px 30px rgba(0, 0, 0, 0.4),
-    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  box-shadow: 0 25px 50px rgba(102, 126, 234, 0.25),
+    0 15px 30px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2);
   border-color: rgba(102, 126, 234, 0.4);
 }
 
@@ -555,7 +541,11 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, rgba(102, 126, 234, 0.9), rgba(118, 75, 162, 0.9));
+  background: linear-gradient(
+    135deg,
+    rgba(102, 126, 234, 0.9),
+    rgba(118, 75, 162, 0.9)
+  );
   display: flex;
   align-items: center;
   justify-content: center;
@@ -575,8 +565,6 @@
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-@import './OptimizedCards.css';
-
 /* Cartes d'outils modernisées - utilise maintenant le système optimisé */
 
 /* Animation du titre outils recruteurs */
@@ -590,21 +578,28 @@
 }
 
 .div_recruter::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: 
-    radial-gradient(circle at 30% 40%, rgba(102, 126, 234, 0.15) 0%, transparent 50%),
-    radial-gradient(circle at 70% 60%, rgba(118, 75, 162, 0.15) 0%, transparent 50%);
+  background: radial-gradient(
+      circle at 30% 40%,
+      rgba(102, 126, 234, 0.15) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 70% 60%,
+      rgba(118, 75, 162, 0.15) 0%,
+      transparent 50%
+    );
   pointer-events: none;
   animation: backgroundPulse 4s ease-in-out infinite;
 }
 
 .titre-outils-recruteurs {
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
   font-weight: 900;
   font-size: clamp(1.3rem, 3.5vw, 2.5rem);
   text-align: center;
@@ -617,12 +612,9 @@
 .lettre-animee-outils {
   display: inline-block;
   color: #ffffff;
-  text-shadow: 
-    0 0 8px rgba(102, 126, 234, 0.7),
-    0 0 16px rgba(102, 126, 234, 0.5),
-    0 0 24px rgba(102, 126, 234, 0.3);
-  animation: 
-    letterGlowOutils 3.5s ease-in-out infinite,
+  text-shadow: 0 0 8px rgba(102, 126, 234, 0.7),
+    0 0 16px rgba(102, 126, 234, 0.5), 0 0 24px rgba(102, 126, 234, 0.3);
+  animation: letterGlowOutils 3.5s ease-in-out infinite,
     letterFloat 2.2s ease-in-out infinite;
   transition: all 0.3s ease;
 }
@@ -630,24 +622,19 @@
 .lettre-animee-outils:hover {
   transform: scale(1.1) translateY(-3px);
   color: #ffd700;
-  text-shadow: 
-    0 0 12px rgba(255, 215, 0, 0.9),
-    0 0 20px rgba(255, 215, 0, 0.7),
+  text-shadow: 0 0 12px rgba(255, 215, 0, 0.9), 0 0 20px rgba(255, 215, 0, 0.7),
     0 0 28px rgba(255, 215, 0, 0.5);
 }
 
 @keyframes letterGlowOutils {
-  0%, 100% {
-    text-shadow: 
-      0 0 8px rgba(102, 126, 234, 0.7),
-      0 0 16px rgba(102, 126, 234, 0.5),
-      0 0 24px rgba(102, 126, 234, 0.3);
+  0%,
+  100% {
+    text-shadow: 0 0 8px rgba(102, 126, 234, 0.7),
+      0 0 16px rgba(102, 126, 234, 0.5), 0 0 24px rgba(102, 126, 234, 0.3);
   }
   50% {
-    text-shadow: 
-      0 0 12px rgba(118, 75, 162, 0.8),
-      0 0 20px rgba(118, 75, 162, 0.6),
-      0 0 28px rgba(118, 75, 162, 0.4);
+    text-shadow: 0 0 12px rgba(118, 75, 162, 0.8),
+      0 0 20px rgba(118, 75, 162, 0.6), 0 0 28px rgba(118, 75, 162, 0.4);
   }
 }
 /* Container des cartes d'outils recruteurs */
@@ -662,18 +649,27 @@
   border-radius: 20px;
   position: relative;
   overflow: hidden;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .Recruteurs::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: 
-    radial-gradient(circle at 25% 25%, rgba(102, 126, 234, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 75% 75%, rgba(118, 75, 162, 0.1) 0%, transparent 50%);
+  background: radial-gradient(
+      circle at 25% 25%,
+      rgba(102, 126, 234, 0.1) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 75% 75%,
+      rgba(118, 75, 162, 0.1) 0%,
+      transparent 50%
+    );
   pointer-events: none;
   animation: containerGlow 6s ease-in-out infinite;
 }
@@ -685,27 +681,27 @@
     gap: 1.5rem;
     padding: 0 1rem;
   }
-  
+
   .carte-site-recrutement {
     padding: 1rem;
   }
-  
+
   .titre-sites-recrutement {
     font-size: 1.8rem;
   }
-  
+
   .Recruteurs {
     grid-template-columns: 1fr;
     padding: 1rem;
     gap: 1.5rem;
   }
-  
+
   .div_recruteurs {
     width: 100%;
     min-height: 300px;
     padding: 1.5rem;
   }
-  
+
   .titre-outils-recruteurs {
     font-size: 1.5rem;
   }
@@ -727,14 +723,33 @@
   animation: fadeInUpSite 0.6s ease-out forwards;
 }
 
-.carte-site-recrutement:nth-child(1) { animation-delay: 0.1s; }
-.carte-site-recrutement:nth-child(2) { animation-delay: 0.15s; }
-.carte-site-recrutement:nth-child(3) { animation-delay: 0.2s; }
-.carte-site-recrutement:nth-child(4) { animation-delay: 0.25s; }
-.carte-site-recrutement:nth-child(5) { animation-delay: 0.3s; }
-.carte-site-recrutement:nth-child(6) { animation-delay: 0.35s; }
-.carte-site-recrutement:nth-child(7) { animation-delay: 0.4s; }
-.carte-site-recrutement:nth-child(8) { animation-delay: 0.45s; }
-.carte-site-recrutement:nth-child(9) { animation-delay: 0.5s; }
-.carte-site-recrutement:nth-child(10) { animation-delay: 0.55s; }
-
+.carte-site-recrutement:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.carte-site-recrutement:nth-child(2) {
+  animation-delay: 0.15s;
+}
+.carte-site-recrutement:nth-child(3) {
+  animation-delay: 0.2s;
+}
+.carte-site-recrutement:nth-child(4) {
+  animation-delay: 0.25s;
+}
+.carte-site-recrutement:nth-child(5) {
+  animation-delay: 0.3s;
+}
+.carte-site-recrutement:nth-child(6) {
+  animation-delay: 0.35s;
+}
+.carte-site-recrutement:nth-child(7) {
+  animation-delay: 0.4s;
+}
+.carte-site-recrutement:nth-child(8) {
+  animation-delay: 0.45s;
+}
+.carte-site-recrutement:nth-child(9) {
+  animation-delay: 0.5s;
+}
+.carte-site-recrutement:nth-child(10) {
+  animation-delay: 0.55s;
+}
