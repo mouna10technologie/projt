@@ -135,6 +135,79 @@
   }
 }
 
+/* ===== SECTION DES BOUTONS ===== */
+.buttons-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+  margin: 1rem 0 2rem 0;
+  position: relative;
+  z-index: 2;
+}
+
+.home-button {
+  padding: 1rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 12px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  min-width: 150px;
+  text-align: center;
+  border: 2px solid transparent;
+}
+
+.recruteur-button {
+  background: linear-gradient(145deg, #0f3460 0%, #16213e 50%, #1a1a2e 100%);
+  color: #00d4ff;
+  border-color: rgba(0, 212, 255, 0.3);
+  box-shadow: 0 8px 25px rgba(0, 212, 255, 0.2);
+}
+
+.candidat-button {
+  background: linear-gradient(145deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.home-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transition: left 0.5s ease;
+}
+
+.home-button:hover::before {
+  left: 100%;
+}
+
+.recruteur-button:hover {
+  transform: translateY(-3px) scale(1.05);
+  border-color: rgba(0, 212, 255, 0.6);
+  box-shadow: 0 15px 35px rgba(0, 212, 255, 0.4);
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(0, 212, 255, 0.8);
+}
+
+.candidat-button:hover {
+  transform: translateY(-3px) scale(1.05);
+  border-color: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 15px 35px rgba(255, 255, 255, 0.2);
+  color: #00d4ff;
+  text-shadow: 0 0 10px rgba(0, 212, 255, 0.8);
+}
+
 /* ===== SECTION DES CARTES OPTIMISÉES ===== */
 .cards-section {
   position: relative;
@@ -304,6 +377,19 @@
   
   .glowing-letter:hover {
     transform: scale(1.05) translateY(-2px);
+  }
+  
+  .buttons-section {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.5rem 1rem;
+  }
+  
+  .home-button {
+    width: 100%;
+    max-width: 250px;
+    padding: 0.875rem 2rem;
+    font-size: 1rem;
   }
   
   .cards-section {

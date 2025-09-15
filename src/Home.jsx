@@ -1,6 +1,7 @@
 import Image from "./Image";
 import Body from "./Body";
 import Careaux from "./Careaux";
+import { Link } from "react-router-dom";
 import "./Home.css";
 
 function AnimatedText({ text }) {
@@ -84,6 +85,15 @@ function Home() {
       <Image />
       
       <AnimatedText text={descriptionText} />
+      
+      <div className="buttons-section">
+        <Link to="/Recruteurs" className="home-button recruteur-button">
+          Recruteur
+        </Link>
+        <Link to="/Candidat" className="home-button candidat-button">
+          Candidat
+        </Link>
+      </div>
       
       <div className="cards-section">
         {box.map((carrer, index1) => (
