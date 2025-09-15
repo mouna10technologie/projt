@@ -13,6 +13,7 @@ function Careaux({ carrer }) {
           />
         ))}
       </div>
+      
     </>
   );
 }
