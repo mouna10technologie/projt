@@ -103,7 +103,7 @@ function Recruteurs() {
       description:
         "Premier site d'emploi au Maroc, spécialisé dans tous les secteurs y compris l'IT",
       url: "https://www.rekrute.com",
-      logo: "./public/Developeurs.png",
+      logo: "/Developeurs.png",
       type: "maroc",
       pays: "Maroc",
       specialite: "Généraliste IT",
@@ -113,7 +113,7 @@ function Recruteurs() {
       description:
         "Plateforme leader au Maroc pour les offres d'emploi tech et développement",
       url: "https://www.emploi.ma",
-      logo: "./public/DevloppeurX.jpeg",
+      logo: "/DevloppeurX.jpeg",
       type: "maroc",
       pays: "Maroc",
       specialite: "Tech & Dev",
@@ -123,7 +123,7 @@ function Recruteurs() {
       description:
         "Site d'emploi du Moyen-Orient et Afrique du Nord, très actif au Maroc",
       url: "https://www.bayt.com",
-      logo: "./public/Developeurs.png",
+      logo: "/Developeurs.png",
       type: "maroc",
       pays: "MENA",
       specialite: "IT & Software",
@@ -133,7 +133,7 @@ function Recruteurs() {
       description:
         "Plateforme marocaine pour freelances et projets de développement",
       url: "https://www.m3alem.com",
-      logo: "./public/DevloppeurX.jpeg",
+      logo: "/DevloppeurX.jpeg",
       type: "maroc",
       pays: "Maroc",
       specialite: "Freelance Dev",
@@ -145,7 +145,7 @@ function Recruteurs() {
       description:
         "Réseau professionnel mondial, incontournable pour le recrutement tech",
       url: "https://www.linkedin.com/jobs",
-      logo: "./public/Developeurs.png",
+      logo: "/Developeurs.png",
       type: "international",
       pays: "Mondial",
       specialite: "Professional Network",
@@ -155,7 +155,7 @@ function Recruteurs() {
       description:
         "Plateforme spécialisée pour développeurs et professionnels tech",
       url: "https://stackoverflow.com/jobs",
-      logo: "./public/DevloppeurX.jpeg",
+      logo: "/DevloppeurX.jpeg",
       type: "international",
       pays: "Mondial",
       specialite: "Développeurs",
@@ -165,7 +165,7 @@ function Recruteurs() {
       description:
         "Offres d'emploi directement intégrées à la plateforme de développement",
       url: "https://jobs.github.com",
-      logo: "./public/Developeurs.png",
+      logo: "/Developeurs.png",
       type: "international",
       pays: "Mondial",
       specialite: "Open Source",
@@ -175,7 +175,7 @@ function Recruteurs() {
       description:
         "Spécialisé dans les startups et entreprises tech innovantes",
       url: "https://angel.co/jobs",
-      logo: "./public/DevloppeurX.jpeg",
+      logo: "/DevloppeurX.jpeg",
       type: "international",
       pays: "Mondial",
       specialite: "Startups",
@@ -185,7 +185,7 @@ function Recruteurs() {
       description:
         "Plateforme dédiée aux emplois en télétravail pour développeurs",
       url: "https://remote.co",
-      logo: "./public/Developeurs.png",
+      logo: "/Developeurs.png",
       type: "international",
       pays: "Remote",
       specialite: "Télétravail",
@@ -194,7 +194,7 @@ function Recruteurs() {
       nom: "Dice.com",
       description: "Site américain spécialisé dans les emplois technologiques",
       url: "https://www.dice.com",
-      logo: "./public/DevloppeurX.jpeg",
+      logo: "/DevloppeurX.jpeg",
       type: "international",
       pays: "USA",
       specialite: "Tech Jobs",
@@ -205,7 +205,7 @@ function Recruteurs() {
     <>
       <div className="les_recruteurs">
         <img
-          src="./public/Recruteur.jpg"
+          src="/Recruteur.jpg"
           alt="image sur les recruteurs "
           width="400px"
           height="400px"

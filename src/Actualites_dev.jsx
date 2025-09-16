@@ -116,7 +116,7 @@ function Actualites_dev() {
       titre: "React 19 : Les nouvelles fonctionnalités révolutionnaires",
       description:
         "Découvrez les Server Components, les nouvelles APIs de concurrence et les améliorations de performance qui transforment le développement React.",
-      image: "./public/Developeurs.png",
+      image: "/Developeurs.png",
       categorie: "Développeurs",
       date: "15 Déc 2024",
       auteur: "Sarah Chen",
@@ -126,7 +126,7 @@ function Actualites_dev() {
       titre: "GPT-5 et l'avenir de l'IA générative en 2025",
       description:
         "OpenAI annonce des avancées majeures en IA multimodale. Impact sur le développement, l'automatisation du code et les outils de productivité.",
-      image: "./public/DevloppeurX.jpeg",
+      image: "/DevloppeurX.jpeg",
       categorie: "Intelligence Artificielle",
       date: "12 Déc 2024",
       auteur: "Dr. Alex Kumar",
@@ -136,7 +136,7 @@ function Actualites_dev() {
       titre: "Rust dépasse C++ : La révolution des langages système",
       description:
         "Analyse de l'adoption croissante de Rust dans les projets critiques. Performance, sécurité mémoire et écosystème en pleine expansion.",
-      image: "./public/Developeurs.png",
+      image: "/Developeurs.png",
       categorie: "Langages",
       date: "10 Déc 2024",
       auteur: "Marcus Weber",
@@ -146,7 +146,7 @@ function Actualites_dev() {
       titre: "WebAssembly 3.0 : Performance native dans le navigateur",
       description:
         "Les nouvelles spécifications WASM révolutionnent le web. Applications desktop-class, gaming et calcul scientifique directement en ligne.",
-      image: "./public/DevloppeurX.jpeg",
+      image: "/DevloppeurX.jpeg",
       categorie: "Nouvelles Technologies",
       date: "8 Déc 2024",
       auteur: "Elena Rodriguez",
@@ -156,7 +156,7 @@ function Actualites_dev() {
       titre: "GitHub Copilot X : L'IA qui code mieux que les humains ?",
       description:
         "Retour d'expérience sur les dernières capacités de Copilot. Génération de tests, debugging automatique et pair programming avec l'IA.",
-      image: "./public/Developeurs.png",
+      image: "/Developeurs.png",
       categorie: "Intelligence Artificielle",
       date: "5 Déc 2024",
       auteur: "Thomas Liu",
@@ -166,7 +166,7 @@ function Actualites_dev() {
       titre: "TypeScript 5.5 : Inférence de types révolutionnaire",
       description:
         "Les nouvelles fonctionnalités de TypeScript améliorent drastiquement l'expérience développeur. Pattern matching et types conditionnels avancés.",
-      image: "./public/DevloppeurX.jpeg",
+      image: "/DevloppeurX.jpeg",
       categorie: "Langages",
       date: "3 Déc 2024",
       auteur: "Jessica Park",
@@ -176,7 +176,7 @@ function Actualites_dev() {
       titre: "Edge Computing : L'architecture du futur",
       description:
         "Comment l'edge computing transforme les applications web. Latence ultra-faible, traitement local et nouvelles architectures distribuées.",
-      image: "./public/Developeurs.png",
+      image: "/Developeurs.png",
       categorie: "Nouvelles Technologies",
       date: "1 Déc 2024",
       auteur: "David Kim",
@@ -186,7 +186,7 @@ function Actualites_dev() {
       titre: "Salaires développeurs 2025 : Tendances et prédictions",
       description:
         "Étude complète sur l'évolution des salaires dans la tech. Remote work, spécialisations les plus demandées et négociation salariale.",
-      image: "./public/DevloppeurX.jpeg",
+      image: "/DevloppeurX.jpeg",
       categorie: "Développeurs",
       date: "28 Nov 2024",
       auteur: "Marie Dubois",
@@ -196,7 +196,7 @@ function Actualites_dev() {
       titre: "Quantum Computing : Premiers algorithmes pratiques",
       description:
         "IBM et Google annoncent des percées en informatique quantique. Applications concrètes pour la cryptographie et l'optimisation.",
-      image: "./public/Developeurs.png",
+      image: "/Developeurs.png",
       categorie: "Nouvelles Technologies",
       date: "25 Nov 2024",
       auteur: "Prof. Ahmed Hassan",
@@ -207,7 +207,7 @@ function Actualites_dev() {
   return (
     <>
       <div className="Les_actualités">
-        <img src="./public/news-technology.webp" />
+        <img src="/news-technology.webp" />
         <h1 className="h1_actualités"> Les actualités</h1>
         <h3 className="h3_actualités">
           Suivez les actualités clés du développement, quels que soient votre

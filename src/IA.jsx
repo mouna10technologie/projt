@@ -58,32 +58,32 @@ function Carrousel3D() {
 
   const imagesIA = [
     {
-      src: "./public/ia.jpeg",
+      src: "/ia.jpeg",
       alt: "Intelligence Artificielle Générale",
       titre: "IA Générale",
     },
     {
-      src: "./public/developpeur_ia.png",
+      src: "/developpeur_ia.png",
       alt: "Machine Learning",
       titre: "Machine Learning",
     },
     {
-      src: "./public/ai3.jpg",
+      src: "/ai3.jpg",
       alt: "Deep Learning",
       titre: "Deep Learning",
     },
     {
-      src: "./public/ai.jpg",
+      src: "/ai.jpg",
       alt: "IA Conversationnelle",
       titre: "Chatbots IA",
     },
     {
-      src: "./public/ai3.jpg",
+      src: "/ai3.jpg",
       alt: "Vision par Ordinateur",
       titre: "Computer Vision",
     },
     {
-      src: "./public/ai4.jpg",
+      src: "/ai4.jpg",
       alt: "Traitement du Langage",
       titre: "NLP",
     },

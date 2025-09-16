@@ -8,7 +8,7 @@ function NavBar() {
         <div className="logo">
           <span className="logo-icon">
             <img
-              src="./public/LogoDev-job2.jpg"
+              src="/LogoDev-job2.jpg"
               alt="Logo"
               width="70px"
               height="70px"
