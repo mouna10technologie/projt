@@ -935,3 +935,15 @@
     );
   }
 }
+.button_candidat {
+  text-align: center;
+  margin: "50px 0";
+  padding: "12px 24px";
+  font-size: "18px";
+  background-color: "#28a745";
+  color: "#fff";
+  border-radius: "none";
+  border: "6px";
+  box-shadow: "pointer";
+  cursor: "0px 2px 5px rgba(0,0,0,0.2)";
+}
