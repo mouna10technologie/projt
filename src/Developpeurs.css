@@ -935,6 +935,7 @@
     );
   }
 }
+<<<<<<< HEAD
 
 .button_candidat {
   text-align: right;
@@ -963,4 +964,17 @@
   color: #ffffff;
   transform: translateY(-2px);
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+=======
+.button_candidat {
+  text-align: center;
+  margin: "50px 0";
+  padding: "12px 24px";
+  font-size: "18px";
+  background-color: "#28a745";
+  color: "#fff";
+  border-radius: "none";
+  border: "6px";
+  box-shadow: "pointer";
+  cursor: "0px 2px 5px rgba(0,0,0,0.2)";
+>>>>>>> 048d96ebc58061430dc358c652a64b3360056a90
 }

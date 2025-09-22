@@ -36,9 +36,7 @@ function FormulaireCandidat() {
 
     const candidat = {
       ...formData,
-      competences: formData.competences
-        .split(",")
-        .map((comp) => comp.trim()),
+      competences: formData.competences.split(",").map((comp) => comp.trim()),
     };
 
     const formDataToSend = new FormData();

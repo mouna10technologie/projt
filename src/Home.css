@@ -1,4 +1,4 @@
-@import './OptimizedCards.css';
+@import "./OptimizedCards.css";
 
 /* ===== CONTENEUR PRINCIPAL ===== */
 .home-container {
@@ -10,23 +10,39 @@
 }
 
 .home-container::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: 
-    radial-gradient(circle at 20% 30%, rgba(0, 212, 255, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 80% 70%, rgba(102, 126, 234, 0.08) 0%, transparent 50%),
-    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.03) 0%, transparent 50%);
+  background: radial-gradient(
+      circle at 20% 30%,
+      rgba(0, 212, 255, 0.1) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 80% 70%,
+      rgba(102, 126, 234, 0.08) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 50% 50%,
+      rgba(255, 255, 255, 0.03) 0%,
+      transparent 50%
+    );
   pointer-events: none;
   animation: backgroundPulse 8s ease-in-out infinite;
 }
 
 @keyframes backgroundPulse {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.7; }
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
 }
 
 /* ===== TEXTE ANIMÉ AVEC EFFET LUMINEUX ===== */
@@ -47,33 +63,33 @@
   line-height: 1.4;
   max-width: 1200px;
   margin: 0;
-  font-family: 'Inter', 'Segoe UI', sans-serif;
+  font-family: "Inter", "Segoe UI", sans-serif;
   letter-spacing: 0.02em;
 }
 
 .glowing-letter {
   display: inline-block;
   color: #ffffff;
-  text-shadow: 
-    0 0 5px rgba(255, 255, 255, 0.8),
-    0 0 10px rgba(0, 212, 255, 0.6),
-    0 0 15px rgba(0, 212, 255, 0.4),
-    0 0 20px rgba(0, 212, 255, 0.2);
-  animation: 
-    letterGlow 4s ease-in-out infinite,
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.8), 0 0 10px rgba(0, 212, 255, 0.6),
+    0 0 15px rgba(0, 212, 255, 0.4), 0 0 20px rgba(0, 212, 255, 0.2);
+  animation: letterGlow 4s ease-in-out infinite,
     letterFloat 3s ease-in-out infinite;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
 }
 
 .glowing-letter::before {
-  content: '';
+  content: "";
   position: absolute;
   top: -10px;
   left: -10px;
   right: -10px;
   bottom: -10px;
-  background: radial-gradient(circle, rgba(0, 212, 255, 0.1) 0%, transparent 70%);
+  background: radial-gradient(
+    circle,
+    rgba(0, 212, 255, 0.1) 0%,
+    transparent 70%
+  );
   border-radius: 50%;
   opacity: 0;
   transition: opacity 0.3s ease;
@@ -83,11 +99,8 @@
 .glowing-letter:hover {
   transform: scale(1.1) translateY(-3px);
   color: #00d4ff;
-  text-shadow: 
-    0 0 8px rgba(255, 255, 255, 1),
-    0 0 15px rgba(0, 212, 255, 0.9),
-    0 0 25px rgba(0, 212, 255, 0.7),
-    0 0 35px rgba(0, 212, 255, 0.5),
+  text-shadow: 0 0 8px rgba(255, 255, 255, 1), 0 0 15px rgba(0, 212, 255, 0.9),
+    0 0 25px rgba(0, 212, 255, 0.7), 0 0 35px rgba(0, 212, 255, 0.5),
     0 0 45px rgba(0, 212, 255, 0.3);
 }
 
@@ -96,38 +109,32 @@
 }
 
 @keyframes letterGlow {
-  0%, 100% {
-    text-shadow: 
-      0 0 5px rgba(255, 255, 255, 0.8),
-      0 0 10px rgba(0, 212, 255, 0.6),
-      0 0 15px rgba(0, 212, 255, 0.4),
+  0%,
+  100% {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8),
+      0 0 10px rgba(0, 212, 255, 0.6), 0 0 15px rgba(0, 212, 255, 0.4),
       0 0 20px rgba(0, 212, 255, 0.2);
   }
   25% {
-    text-shadow: 
-      0 0 8px rgba(255, 255, 255, 0.9),
-      0 0 15px rgba(102, 126, 234, 0.7),
-      0 0 25px rgba(102, 126, 234, 0.5),
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.9),
+      0 0 15px rgba(102, 126, 234, 0.7), 0 0 25px rgba(102, 126, 234, 0.5),
       0 0 35px rgba(102, 126, 234, 0.3);
   }
   50% {
-    text-shadow: 
-      0 0 10px rgba(255, 255, 255, 1),
-      0 0 20px rgba(0, 212, 255, 0.8),
-      0 0 30px rgba(0, 212, 255, 0.6),
+    text-shadow: 0 0 10px rgba(255, 255, 255, 1),
+      0 0 20px rgba(0, 212, 255, 0.8), 0 0 30px rgba(0, 212, 255, 0.6),
       0 0 40px rgba(0, 212, 255, 0.4);
   }
   75% {
-    text-shadow: 
-      0 0 8px rgba(255, 255, 255, 0.9),
-      0 0 15px rgba(118, 75, 162, 0.7),
-      0 0 25px rgba(118, 75, 162, 0.5),
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.9),
+      0 0 15px rgba(118, 75, 162, 0.7), 0 0 25px rgba(118, 75, 162, 0.5),
       0 0 35px rgba(118, 75, 162, 0.3);
   }
 }
 
 @keyframes letterFloat {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0px);
   }
   50% {
@@ -178,13 +185,18 @@
 }
 
 .home-button::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
   transition: left 0.5s ease;
 }
 
@@ -220,13 +232,18 @@
 }
 
 .cards-section::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.1) 50%, transparent 100%);
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(0, 0, 0, 0.1) 50%,
+    transparent 100%
+  );
   pointer-events: none;
 }
 
@@ -240,9 +257,7 @@
   background: linear-gradient(145deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
   border: 1px solid rgba(0, 212, 255, 0.2);
   border-radius: 16px;
-  box-shadow: 
-    0 8px 32px rgba(0, 0, 0, 0.3),
-    0 2px 8px rgba(0, 212, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), 0 2px 8px rgba(0, 212, 255, 0.1);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   text-align: center;
   position: relative;
@@ -253,13 +268,18 @@
 }
 
 .home-container .div_cartes::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(0, 212, 255, 0.1), transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(0, 212, 255, 0.1),
+    transparent
+  );
   transition: left 0.5s ease;
 }
 
@@ -270,9 +290,7 @@
 .home-container .div_cartes:hover {
   transform: translateY(-8px) scale(1.02);
   border-color: rgba(0, 212, 255, 0.4);
-  box-shadow: 
-    0 15px 40px rgba(0, 212, 255, 0.2),
-    0 5px 15px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 15px 40px rgba(0, 212, 255, 0.2), 0 5px 15px rgba(0, 0, 0, 0.4);
 }
 
 .home-container .div_cartes img {
@@ -347,16 +365,16 @@
     font-size: clamp(1.3rem, 3.5vw, 2.2rem);
     padding: 0 1rem;
   }
-  
+
   .animated-text-container {
     padding: 3rem 1.5rem;
   }
-  
+
   .home-container .div_globale {
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 1.25rem;
   }
-  
+
   .home-container .div_cartes {
     width: 240px;
     min-height: 260px;
@@ -369,40 +387,40 @@
     font-size: clamp(1.1rem, 3vw, 1.8rem);
     line-height: 1.5;
   }
-  
+
   .animated-text-container {
     padding: 2rem 1rem;
     margin: 1rem 0;
   }
-  
+
   .glowing-letter:hover {
     transform: scale(1.05) translateY(-2px);
   }
-  
+
   .buttons-section {
     flex-direction: column;
     gap: 1rem;
     padding: 1.5rem 1rem;
   }
-  
+
   .home-button {
     width: 100%;
     max-width: 250px;
     padding: 0.875rem 2rem;
     font-size: 1rem;
   }
-  
+
   .cards-section {
     padding: 2rem 1rem;
     margin-top: 1rem;
   }
-  
+
   .home-container .div_globale {
     grid-template-columns: 1fr;
     gap: 1rem;
     padding: 0.5rem;
   }
-  
+
   .home-container .div_cartes {
     width: 100%;
     max-width: 300px;
@@ -411,18 +429,18 @@
     margin: 0.5rem auto;
     padding: 1rem;
   }
-  
+
   .home-container .div_cartes img {
     width: 80px;
     height: 80px;
     margin: 0 auto 1rem auto;
     display: block;
   }
-  
+
   .home-container .div_cartes h3 {
     font-size: 1rem;
   }
-  
+
   .home-container .div_cartes p {
     font-size: 0.8rem;
     -webkit-line-clamp: 3;
@@ -434,19 +452,19 @@
   .animated-description {
     font-size: clamp(1rem, 2.5vw, 1.5rem);
   }
-  
+
   .animated-text-container {
     padding: 1.5rem 0.5rem;
   }
-  
+
   .glowing-letter {
     animation-duration: 5s;
   }
-  
+
   .cards-section {
     padding: 1.5rem 0.5rem;
   }
-  
+
   .home-container .div_cartes {
     width: 100%;
     max-width: 280px;
@@ -454,17 +472,17 @@
     max-height: 260px;
     padding: 0.875rem;
   }
-  
+
   .home-container .div_cartes img {
     width: 70px;
     height: 70px;
   }
-  
+
   .home-container .div_cartes h3 {
     font-size: 0.95rem;
     margin-bottom: 0.5rem;
   }
-  
+
   .home-container .div_cartes p {
     font-size: 0.75rem;
     -webkit-line-clamp: 3;
@@ -493,23 +511,23 @@
 }
 
 /* ===== EFFETS SPÉCIAUX ===== */
-.glowing-letter:nth-child(5n+1) {
+.glowing-letter:nth-child(5n + 1) {
   animation-delay: 0.1s;
 }
 
-.glowing-letter:nth-child(5n+2) {
+.glowing-letter:nth-child(5n + 2) {
   animation-delay: 0.2s;
 }
 
-.glowing-letter:nth-child(5n+3) {
+.glowing-letter:nth-child(5n + 3) {
   animation-delay: 0.3s;
 }
 
-.glowing-letter:nth-child(5n+4) {
+.glowing-letter:nth-child(5n + 4) {
   animation-delay: 0.4s;
 }
 
-.glowing-letter:nth-child(5n+5) {
+.glowing-letter:nth-child(5n + 5) {
   animation-delay: 0.5s;
 }
 
@@ -533,70 +551,179 @@
   .cards-section {
     animation: none;
   }
-  
+
   .glowing-letter:hover {
     transform: none;
   }
 }
 
 .Recruteurs1 {
- display: flex;
+  display: flex;
   justify-content: center;
   flex-wrap: wrap;
 
   gap: 30px;
   padding: 2rem;
   margin-top: 80px;
-  background-color: #152C52;
+  background-color: #152c52;
   min-height: 100vh;
-  
 }
 
-body{
-
-  background-color: #0a0a0a;
+/* === BODY === */
+body {
+  background-color: #000000;
+  color: #f0f0f0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
+/* === TITRE PRINCIPAL === */
 .p_entreprises {
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  font-weight: bolder;
-  font-size: xx-large;
-
-  color: #ffffff;  
-  text-shadow: 0 0 5px #ffffff, 0 0 5px #ffffff;
-  transition: all 1s ease-in-out;
+  font-family: "Georgia", serif;
+  font-weight: bold;
+  font-size: 2rem;
+  color: #ffffff;
+  text-shadow: 0 0 10px #12294d;
+  transition: all 0.6s ease-in-out;
+  margin: 2rem auto 1.5rem auto;
+  text-align: center;
+  max-width: 90%;
 }
 
 .p_entreprises:hover {
   transform: translateY(5px);
+  text-shadow: 0 0 15px #1e3c72;
 }
-.div_entreprises{
- text-align: center;
- width: 200px;
-  height: 260px;
-  background-color: white;
-  border-radius: 16px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, 0.3s ease;
-  margin: 2rem;
+
+/* === CONTENEUR GLOBAL === */
+.Entreprises {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
   padding: 2rem;
+  justify-items: center;
 }
 
-.Entreprises{
+/* === CARTE ENTREPRISE === */
+.div_entreprises {
   display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
+
+  width: 100%;
+  max-width: 300px;
+  background: linear-gradient(145deg, #12294d, #0f1e38);
+  border-radius: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  padding: 1.5rem;
+  color: #f0f0f0;
+
+  animation: fadeInUp 0.8s ease-out forwards;
+  opacity: 0;
+  min-height: 420px;
+  text-align: center;
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.div_entreprises:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 0 25px rgba(18, 41, 77, 0.8);
+}
+
+/* === ZONE IMAGE (pour centrage) === */
+.div_image1,
+.div_image2 {
+  display: flex;
   justify-content: center;
-  flex-wrap: wrap;
-  padding: 1rem;
-
+  align-items: center;
+  margin-bottom: 0.5rem;
 }
 
-.div_entreprises:hover{
-transform: translateY(-10px) scale(1.05);
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
-
+/* === IMAGE1 - RECTANGLE AVEC BORDURE === */
+.img1 {
+  display: block;
+  margin: 0 auto;
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border: 3px solid #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease;
 }
 
-.h2_titre{
-font-size:medium;
+.img1:hover {
+  transform: scale(1.05);
+}
+
+/* === IMAGE2 - RONDE AVEC BORDURE BLEUE === */
+.img2 {
+  display: block;
+  margin: 0 auto;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border: 3px solid #1e3c72;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(30, 60, 114, 0.4);
+  transition: transform 0.3s ease;
+}
+
+.img2:hover {
+  transform: scale(1.05);
+}
+
+/* === TITRE DE LA CARTE === */
+.h2_titre {
+  font-size: 1.2rem;
+  color: #cccccc;
+  margin: 1rem 0 0.5rem 0;
+}
+
+/* === TEXTE DE LA CARTE === */
+.div_entreprises p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  margin: 0.5rem 0 1rem 0;
+  padding: 0 0.5rem;
+}
+
+/* === BOUTON CENTRÉ === */
+.div_entreprises a {
+  display: flex;
+  justify-content: center;
+  margin-top: auto;
+  width: 100%;
+}
+
+.div_entreprises button {
+  padding: 0.7rem 1.2rem;
+  background-color: #1e3c72;
+  color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-weight: bold;
+  font-size: 0.95rem;
+  width: 100%;
+  max-width: 180px;
+}
+
+.div_entreprises button:hover {
+  background-color: #274e8e;
+  transform: scale(1.05);
 }
