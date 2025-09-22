@@ -208,6 +208,11 @@ function Developpeurs() {
           </span>
         </h3>
       </div>
+      <div className="button_candidat">
+        <button onClick={() => navigate("/formulaire")}>
+          ➕ Ajouter un candidat
+        </button>
+      </div>
 
       <div className="section-candidats">
         <div className="candidats-header">
@@ -259,12 +264,6 @@ function Developpeurs() {
             description={valeur.description}
           />
         ))}
-      </div>
-
-      <div className="button_candidat">
-        <button onClick={() => navigate("/formulaire")}>
-          ➕ Ajouter un candidat
-        </button>
       </div>
     </>
   );
