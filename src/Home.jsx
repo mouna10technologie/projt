@@ -3,6 +3,35 @@ import Body from "./Body";
 import Careaux from "./Careaux";
 import { Link } from "react-router-dom";
 import "./Home.css";
+function CarteEntreprises ({ image1,image2, titre, fondateurs,lien}) {
+  return (
+    <div className="div_entreprises">
+      <div className="div_image1">
+       <img
+          src={image1}
+          alt="image des entreprises"
+          width="100px"
+          height="100px"
+        />
+        </div>
+        <div className="div_image2">
+       <img
+          src={image2}
+          alt="image des entreprises"
+          width="100px"
+          height="100px"
+        />
+        </div>
+        <h2 className="h2_titre">{titre}</h2>
+        <p>{fondateurs}</p>
+
+      <a href={lien} target="_blank" rel="noopener noreferrer">
+        <button>voir le site</button>
+      </a>
+    </div>
+  );
+}
+
 
 function AnimatedText({ text }) {
   return (
@@ -78,8 +107,97 @@ function Home() {
       },
     ],
   ];
+  let box33 = [
+    
+     { image1: "/adobe.jpg",
+      image2: "/adobe.png",  
+      titre : "fondateur:",
+     fondateurs : " Steve Jobs, Steve Wozniak, Ronald Wayne (1976, États-Unis" ,
+      lien: " " },
+
+    { image1: "/amazon.jpg", 
+      image2: "amazon.png", 
+      titre : "fondateur :",
+      fondateurs : " Jeff Bezos (1994, États-Unis)" ,
+      lien: " " },
+
+   { image1: "/cisco.jpg", 
+      image2: "/cisco.webp", 
+      titre : "fondateur",
+      fondateurs: " " ,
+      lien: " " },
+
+
+    { image1: "/IBM.jpg", 
+      image2: "/IBM-.png", 
+      titre : "fondateur",
+      fondateurs : " " ,
+      lien: " " },
+
+    { image1: "/Meta.jpg", 
+      image2: "/meta.webp", 
+      titre : "fondateur",
+      fondateurs : " Mark Zuckerberg, Eduardo Saverin, Andrew McCollum, Dustin Moskovitz,Chris Hughes (2004, États-Unis)" ,
+      lien: " " },
+
+
+
+  { image1: "/Microsoft.jpg", 
+      image2: "", 
+      titre : "fondateur",
+      fondateurs: " Bill Gates, Paul Allen (1975, États-Unis)" ,
+      lien: " " },
+
+   { image1: "/nvidia.jpg", 
+      image2: "/Nvidia.png", 
+      titre : "fondateur",
+      fondateurs: " " ,
+      lien: " " },
+
+   { image1: "/oracle.jpg", 
+      image2: "/Oracle1.jpg", 
+      titre : "fondateurs",
+     fondateur: " " ,
+      lien: " " },
+
+     { image1: "/SAP.jpg", 
+      image2: "/OIP.webp", 
+      titre : "fondateur",
+      fondateurs : " " ,
+      lien: " " },
+
+   { image1: "/sony.jpeg", 
+      image2: "/sony.png", 
+      titre : "fondateur",
+      fondateurs : " " ,
+      lien: " " },
+
+   { image1: "/sumsung.webp", 
+      image2: "/samsung-.png", 
+      titre : "fondateur",
+      fondateurs : " " ,
+      lien: " " },
+
+   { image1: "/Tesla.webp", 
+      image2: "/telssa.png", 
+      titre : "fondateur",
+      fondateurs : " " ,
+      lien: " " },
+
+   { image1: "/apple.jpeg", 
+      image2: "apple.png", 
+      titre : "fondateur",
+     fondateurs : "Steve Jobs, Steve Wozniak, Ronald Wayne (1976, États-Unis) " ,
+      lien: " " },
+
+
+ 
+    
+  ];
+
 
   return (
+    <>
     <div className="home-container">
       <Body />
       <Image />
@@ -101,6 +219,28 @@ function Home() {
         ))}
       </div>
     </div>
+   <div>
+        <p className="p_entreprises">
+          Découvrez une sélection des  entreprises qui operent dans le monde de technologie
+
+        </p>
+      </div>
+      <div className="Entreprises">
+        {box33.map((value1, index11) => (
+          < CarteEntreprises
+            key={index11}
+            image1={value1.image1}
+            image2={value1.image2}
+            titre={value1.titre}
+            citation={value1.citation}
+            lien={value1.lien}
+          />
+        ))}
+      </div>
+
+
+
+    </>
   );
 }
 export default Home;

@@ -1,11 +1,15 @@
+import React from 'react'
 import {Routes,Route,Link}from "react-router-dom";
 import Home from "./Home";
 import Developpeurs from"./Developpeurs"
+
 import Recruteurs from "./Recruteurs"
 import Candidat from "./Candidat"
 import IA from "./IA"
 import Actualites_dev from "./Actualites_dev"
+
 import Contact from "./Contact"
+import FormulaireCandidat from "./FormulaireCandidat";
 function AppRoutes(){
 
 return(
@@ -20,6 +24,7 @@ return(
 <Route path="/Actualites_dev"element={<Actualites_dev/>}></Route>
 <Route path="/IA"element={<IA/>}></Route>
 <Route path="/Contact"element={<Contact/>}></Route>
+ <Route path="/formulaire" element={<FormulaireCandidat />} />
    </Routes>
 
 

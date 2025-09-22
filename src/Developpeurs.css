@@ -935,3 +935,32 @@
     );
   }
 }
+
+.button_candidat {
+  text-align: right;
+  margin: 30px 0;
+}
+
+.button_candidat button {
+  background-color: #13294C; /* Bleu foncé principal */
+  color: #ffffff;
+  border: 1px solid #ffffff20; /* fine bordure blanche semi-transparente */
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2px);
+}
+
+.button_candidat button:hover {
+  background-color: #000000;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}

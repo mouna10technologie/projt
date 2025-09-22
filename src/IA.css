@@ -1,7 +1,6 @@
 .intelligenceArtificielle {
   width: 100%;
   min-height: 100vh;
-  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0a0a0a 100%);
   text-align: center;
   color: #e60278;
   margin-top: 100px;
@@ -374,7 +373,7 @@
 /* Cartes Types d'IA */
 .carte-type-ia {
   width: 280px;
-  height: 370px;
+  height: 379px;
   background: linear-gradient(145deg, #1e1e1e 0%, #2a2a2a 100%);
   border-radius: 20px;
   padding: 0;

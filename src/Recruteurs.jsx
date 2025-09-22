@@ -1,4 +1,18 @@
 import "./Recruteurs.css";
+function CarteRecruteurs1({ image, lien }) {
+  return (
+    <div className="div_reruteurs1">
+      <a href={lien} target="_blank" rel="noopener noreferrer">
+        <img
+          src={image}
+          alt="image des sites freelance"
+          width="100px"
+          height="100px"
+        />
+      </a>
+    </div>
+  );
+}
 
 function CarteRecruteurs({ titre, description }) {
   return (
@@ -30,7 +44,7 @@ function CarteSiteRecrutement({
         </div>
         <div className="badge-type">
           <span className={`badge ${type}`}>
-            {type === "maroc" ? "🇲🇦 Maroc" : "🌍 International"}
+            {type === "maroc" ? " Maroc" : "🌍 International"}
           </span>
         </div>
       </div>
@@ -200,6 +214,48 @@ function Recruteurs() {
       specialite: "Tech Jobs",
     },
   ];
+  let box6 = [
+     { image: "/Codeur-logo.png", 
+      lien: "https://www.codeur.com/" },
+
+    { image: "/Freelancer.webp",
+       lien: "https://www.freelancer.com/" },
+   
+
+    {
+      image: "/Fiverr.png",
+      lien: "https://www.fiverr.com/?msockid=0bd7572cab456563326442e2aa3c6404",
+    },
+
+    { image: "/Guru.jpg", lien: "https://www.guru.com/" },
+
+    {
+      image: "/Euros5.webp",
+      lien: "https://comeup.com/en/5euros-devient-comeup",
+    },
+
+    {
+      image: "/Le-studio.webp",
+      lien: "https://www.bing.com/search?q=Le+Studio+Tech&FORM=HDRSC1",
+    },
+
+    { image: "/LeHibou.png", lien: "https://www.lehibou.com/" },
+    { image: "Linkedin.webp", lien: "https://fr.linkedin.com/" },
+
+    { image: "/Malt.webp", lien: "https://www.malt.fr/" },
+
+    { image: "/Toptal.png", lien: "https://www.toptal.com/" },
+    { image: "/Upwork.webp", lien: "https://www.upwork.com/" },
+    {
+      image: "/PeoplePerHour-logo1.png",
+      lien: "https://www.peopleperhour.com/",
+    },
+    {
+      image: "/Creme.jpg",
+      lien: "https://www.cremedelacreme.io/?utm_source=chatgpt.com",
+    },
+  ];
+
 
   return (
     <>
@@ -291,6 +347,23 @@ function Recruteurs() {
           />
         ))}
       </div>
+
+      <div>
+        <p className="p_recruteurs1">
+          Découvrez une sélection des sites freelance pour trouver des missions ou
+          recruter des talents tech.
+        </p>
+      </div>
+      <div className="Recruteurs1">
+        {box6.map((valeur1, index7) => (
+          <CarteRecruteurs1
+            key={index7}
+            image={valeur1.image}
+            lien={valeur1.lien}
+          />
+        ))}
+      </div>
+
     </>
   );
 }

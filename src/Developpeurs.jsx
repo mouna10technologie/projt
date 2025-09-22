@@ -1,5 +1,5 @@
 import "./Developpeurs.css";
-
+import { useNavigate } from "react-router-dom";
 function CarteDeveloppeurs({ titre, description }) {
   return (
     <div className="div_developpeurs">
@@ -71,6 +71,7 @@ function CarteCandidat({
   );
 }
 function Developpeurs() {
+  const navigate = useNavigate();
   let box1 = [
     {
       titre: "Langages de programmation (selon le domaine)",
@@ -261,6 +262,13 @@ function Developpeurs() {
           />
         ))}
       </div>
+
+      <div className="button_candidat">
+        <button onClick={() => navigate("/formulaire")}>
+          ➕ Ajouter un candidat
+        </button>
+      </div>
+  
     </>
   );
 }
