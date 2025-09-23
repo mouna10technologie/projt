@@ -155,14 +155,14 @@ function Home() {
 
     {
       image1: "/Microsoft.jpg",
-      image2: "",
+      image2: "microsoft.png",
       titre: "fondateur",
       fondateurs: " Bill Gates, Paul Allen (1975, États-Unis)",
       lien: "https://www.microsoft.com/",
     },
 
     {
-      image1: "/nvidiajpg",
+      image1: "/nvidia.jpg",
       image2: "/Nvidia.png",
       titre: "fondateur",
       fondateurs:
